@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARX Prime | Systematic Liquidity & Institutional Execution</title>
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0a0c0e',
+                        cardbg: '#111418',
+                        premiumBlue: '#00e6ff',
+                        slateText: '#8a99ad',
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        space: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .glow-effect {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 30px rgba(0, 230, 255, 0.12);
+            border-color: rgba(0, 230, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-white font-space antialiased selection:bg-premiumBlue selection:text-obsidian overflow-x-hidden">
+
+    <!-- Tech Grid Background -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+
+    <!-- Navigation -->
+    <nav class="relative w-full max-w-7xl mx-auto flex justify-between items-center px-6 py-8 md:px-12 z-50">
+      <div class="font-cinzel font-bold text-lg md:text-xl tracking-[0.25em] text-white">ARX PRIME</div>
+      <div class="flex space-x-8 text-[10px] tracking-[0.3em] uppercase text-slateText font-medium">
+        <a href="#overview" class="hover:text-premiumBlue transition-colors">Overview</a>
+        <a href="#infrastructure" class="hover:text-premiumBlue transition-colors">Infrastructure</a>
+        <a href="#access" class="hover:text-premiumBlue transition-colors">Portal</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="overview" class="relative w-full max-w-5xl mx-auto min-h-[80vh] flex flex-col justify-center items-center text-center px-6 z-10">
+      <div class="text-premiumBlue text-xl mb-6 tracking-widest animate-pulse">✦</div>
+      
+      <h1 class="font-cinzel text-4xl sm:text-6xl md:text-7xl font-normal tracking-[0.2em] mb-4 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400">
+        ARX PRIME
+      </h1>
+      
+      <p class="text-[10px] md:text-xs font-medium tracking-[0.4em] text-premiumBlue uppercase mb-12">
+        Non-Discretionary Quantitative Architecture
+      </p>
+      
+      <div class="w-12 h-[1px] bg-gradient-to-r from-transparent via-premiumBlue to-transparent mb-12"></div>
+      
+      <p class="max-w-2xl text-slateText text-sm md:text-base font-light leading-relaxed mb-12 tracking-wide">
+        Deploying high-frequency, systematic infrastructure across global liquidity pools. Engineered exclusively for computerized execution, structural risk isolation, and raw mathematical edge.
+      </p>
+      
+      <a href="#access" class="px-8 py-3 bg-transparent border border-white/10 text-[10px] font-semibold tracking-[0.3em] uppercase text-white hover:border-premiumBlue hover:text-premiumBlue transition-all duration-500 rounded-none">
+        Request Institutional Access
+      </a>
+    </header>
+
+    <!-- Core Pillars -->
+    <section id="infrastructure" class="relative w-full max-w-7xl mx-auto px-6 py-20 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 z-20">
+      
+      <!-- Panel 1 -->
+      <div class="bg-cardbg border border-white/[0.03] p-10 glow-effect relative overflow-hidden group">
+        <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-premiumBlue/30 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+        <div class="text-xs font-mono text-premiumBlue/50 mb-6">// 01 . ALPHA_ENGINE</div>
+        <h3 class="font-cinzel text-xl font-medium tracking-wider mb-4 text-white">Algorithmic Systems</h3>
+        <p class="text-slateText text-sm font-light leading-relaxed tracking-wide">
+          Purely mechanical framework constructed to eliminate emotional friction from hyper-fast microstructures. Quantitative layers continuously filter market anomalies to maintain peak efficiency.
+        </p>
+      </div>
+
+      <!-- Panel 2 -->
+      <div class="bg-cardbg border border-white/[0.03] p-10 glow-effect relative overflow-hidden group">
+        <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-premiumBlue/30 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+        <div class="text-xs font-mono text-premiumBlue/50 mb-6">// 02 . RISK_INSULATION</div>
+        <h3 class="font-cinzel text-xl font-medium tracking-wider mb-4 text-white">Execution Layer</h3>
+        <p class="text-slateText text-sm font-light leading-relaxed tracking-wide">
+          A rigid transaction layer optimized for immediate processing and systemic order handling. Real-time mathematical controls guard firm parameters while capturing systematic returns.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Operational Access Footnote -->
+    <section id="access" class="w-full max-w-4xl mx-auto text-center px-6 py-24 border-t border-white/[0.03]">
+        <div class="inline-flex items-center space-x-2 bg-cardbg px-4 py-2 border border-white/[0.05] mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-premiumBlue animate-ping"></span>
+            <span class="text-[10px] font-mono tracking-widest text-slateText uppercase">SYSTEM STATUS: OPERATIONAL</span>
+        </div>
+        <p class="text-xs text-slateText/60 font-mono tracking-wide">Secure gateway communication via cryptographic handshake protocol only.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full text-center py-8 border-t border-white/[0.02] text-[10px] tracking-widest text-slateText/40 font-mono">
+        &copy; 2026 ARX PRIME ARCHITECTURE. ALL RIGHTS RESERVED.
+    </footer>
+
+</body>
+</html>
