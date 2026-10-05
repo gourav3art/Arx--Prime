@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth antialiased">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ARX PRIME | Institutional Advisory & Capital Infrastructure</title>
 
   <!-- Typography: Cormorant Garamond, Plus Jakarta Sans, JetBrains Mono -->
@@ -108,7 +108,6 @@
       -webkit-text-fill-color: transparent;
     }
 
-    /* Print Formatting */
     @media print {
       body {
         background-color: #FFFFFF !important;
@@ -152,29 +151,29 @@
   <!-- Ambient Dynamic Graphic Visualizer -->
   <canvas id="ambientCanvas"></canvas>
 
-  <!-- Primary Institutional Header -->
-  <header class="sticky top-0 z-50 bg-obsidian-950/90 backdrop-blur-2xl border-b border-white/5 transition-all">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 h-24 flex items-center justify-between">
+  <!-- Optimized Responsive Institutional Header -->
+  <header class="sticky top-0 z-50 bg-obsidian-950/95 backdrop-blur-2xl border-b border-white/5 transition-all pt-[env(safe-area-inset-top,0px)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 sm:py-4 flex items-center justify-between gap-3">
       
-      <!-- Brand Emblem (Strictly ARX PRIME) -->
-      <a href="#overview" class="flex items-center space-x-4 group" aria-label="ARX PRIME Home">
-        <div class="w-11 h-11 relative flex items-center justify-center shrink-0">
+      <!-- Brand Emblem & Title Group -->
+      <a href="#overview" class="flex items-center space-x-3 sm:space-x-4 group min-w-0 flex-shrink" aria-label="ARX PRIME Home">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 relative flex items-center justify-center shrink-0">
           <svg class="w-full h-full transform group-hover:rotate-45 transition-transform duration-700 ease-out" viewBox="0 0 100 100" fill="none">
-            <polygon points="50,4 96,50 50,96 4,50" stroke="#C5A059" stroke-width="1.5" stroke-opacity="0.85" fill="rgba(197, 160, 89, 0.05)"/>
-            <polygon points="50,14 86,50 50,86 14,50" stroke="#C5A059" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.5"/>
-            <circle cx="50" cy="50" r="26" stroke="#EBDDC7" stroke-width="1.2" stroke-opacity="0.7"/>
-            <polygon points="50,26 74,50 50,74 26,50" stroke="#C5A059" stroke-width="0.8" fill="rgba(197, 160, 89, 0.15)"/>
+            <polygon points="50,4 96,50 50,96 4,50" stroke="#C5A059" stroke-width="1.8" stroke-opacity="0.9" fill="rgba(197, 160, 89, 0.08)"/>
+            <polygon points="50,14 86,50 50,86 14,50" stroke="#C5A059" stroke-width="1.2" stroke-dasharray="3 3" stroke-opacity="0.5"/>
+            <circle cx="50" cy="50" r="24" stroke="#EBDDC7" stroke-width="1.2" stroke-opacity="0.75"/>
+            <polygon points="50,26 74,50 50,74 26,50" stroke="#C5A059" stroke-width="0.9" fill="rgba(197, 160, 89, 0.2)"/>
             <circle cx="50" cy="50" r="3.5" fill="#C5A059" />
           </svg>
         </div>
-        <div class="flex flex-col">
-          <span class="text-2xl font-serif tracking-[0.25em] text-white font-medium">ARX PRIME</span>
-          <span class="text-[9px] font-mono tracking-[0.3em] text-slate-400 uppercase mt-0.5">Institutional Advisory & Capital Infrastructure</span>
+        <div class="flex flex-col min-w-0 justify-center">
+          <span class="text-xl sm:text-2xl font-serif tracking-[0.22em] text-white font-medium whitespace-nowrap leading-tight">ARX PRIME</span>
+          <span class="hidden sm:block text-[8px] sm:text-[9px] font-mono tracking-[0.28em] text-slate-400 uppercase mt-0.5 truncate">Institutional Advisory &amp; Capital Infrastructure</span>
         </div>
       </a>
 
-      <!-- Primary Navigation Links (Smooth scroll on-page anchors) -->
-      <nav class="hidden xl:flex items-center space-x-8 text-xs font-mono tracking-widest uppercase">
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden xl:flex items-center space-x-8 text-xs font-mono tracking-widest uppercase flex-shrink-0">
         <a href="#overview" class="text-slate-300 hover:text-champagne-300 transition-colors py-1">Overview</a>
         <a href="#mandates" class="text-slate-400 hover:text-champagne-300 transition-colors py-1">Advisory Mandates</a>
         <a href="#analytics" class="text-slate-400 hover:text-champagne-300 transition-colors py-1">Quantitative Analytics</a>
@@ -184,81 +183,81 @@
       </nav>
 
       <!-- Institutional Quick Actions -->
-      <div class="flex items-center space-x-4">
-        <a href="#statutory-annexure" class="hidden sm:inline-flex items-center space-x-2 text-xs font-mono tracking-wider text-champagne-300 border border-champagne-400/30 bg-champagne-400/5 hover:bg-champagne-400/10 px-4 py-2.5 rounded-lg transition duration-200">
+      <div class="flex items-center space-x-2.5 sm:space-x-4 flex-shrink-0">
+        <a href="#statutory-annexure" class="hidden md:inline-flex items-center space-x-2 text-xs font-mono tracking-wider text-champagne-300 border border-champagne-400/30 bg-champagne-400/5 hover:bg-champagne-400/10 px-3.5 py-2 rounded-lg transition duration-200">
           <i data-lucide="shield-check" class="w-3.5 h-3.5 text-champagne-400"></i>
-          <span>Registry Coordinates</span>
+          <span>Registry</span>
         </a>
-        <a href="#correspondence" class="px-4 py-2.5 bg-gradient-to-r from-champagne-400 to-champagne-500 hover:from-champagne-300 hover:to-champagne-400 text-obsidian-950 font-semibold text-xs font-mono uppercase tracking-wider rounded-lg shadow-gold-glow transition duration-200">
+        <a href="#correspondence" class="px-3 sm:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-champagne-400 to-champagne-500 hover:from-champagne-300 hover:to-champagne-400 text-obsidian-950 font-semibold text-[11px] sm:text-xs font-mono uppercase tracking-wider rounded-lg shadow-gold-glow transition duration-200 whitespace-nowrap">
           Transmission Desk
         </a>
-        <button onclick="toggleMobileMenu()" class="xl:hidden p-2 text-slate-400 hover:text-white focus:outline-none" aria-label="Toggle Navigation Menu">
-          <i data-lucide="menu" id="menuToggleIcon" class="w-6 h-6"></i>
+        <button onclick="toggleMobileMenu()" class="xl:hidden p-2 -mr-1 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Navigation Menu">
+          <i data-lucide="menu" id="menuToggleIcon" class="w-5 h-5 sm:w-6 sm:h-6"></i>
         </button>
       </div>
 
     </div>
 
     <!-- Responsive Mobile Drawer -->
-    <div id="mobileMenu" class="hidden xl:hidden bg-obsidian-900 border-b border-white/5 px-6 py-6 space-y-4 font-mono text-xs uppercase tracking-widest">
-      <a href="#overview" onclick="toggleMobileMenu()" class="block text-slate-200 py-1 hover:text-champagne-300">Overview</a>
-      <a href="#mandates" onclick="toggleMobileMenu()" class="block text-slate-400 py-1 hover:text-champagne-300">Advisory Mandates</a>
-      <a href="#analytics" onclick="toggleMobileMenu()" class="block text-slate-400 py-1 hover:text-champagne-300">Quantitative Analytics</a>
-      <a href="#treasury" onclick="toggleMobileMenu()" class="block text-slate-400 py-1 hover:text-champagne-300">Treasury Architecture</a>
-      <a href="#governance" onclick="toggleMobileMenu()" class="block text-slate-400 py-1 hover:text-champagne-300">Governance & Controls</a>
-      <a href="#correspondence" onclick="toggleMobileMenu()" class="block text-slate-400 py-1 hover:text-champagne-300">Correspondence Desk</a>
-      <a href="#statutory-annexure" onclick="toggleMobileMenu()" class="block text-champagne-400 py-1">Registry Annexure →</a>
+    <div id="mobileMenu" class="hidden xl:hidden bg-obsidian-900/98 backdrop-blur-xl border-b border-white/10 px-6 py-6 space-y-4 font-mono text-xs uppercase tracking-widest">
+      <a href="#overview" onclick="toggleMobileMenu()" class="block text-slate-200 py-1.5 hover:text-champagne-300">Overview</a>
+      <a href="#mandates" onclick="toggleMobileMenu()" class="block text-slate-400 py-1.5 hover:text-champagne-300">Advisory Mandates</a>
+      <a href="#analytics" onclick="toggleMobileMenu()" class="block text-slate-400 py-1.5 hover:text-champagne-300">Quantitative Analytics</a>
+      <a href="#treasury" onclick="toggleMobileMenu()" class="block text-slate-400 py-1.5 hover:text-champagne-300">Treasury Architecture</a>
+      <a href="#governance" onclick="toggleMobileMenu()" class="block text-slate-400 py-1.5 hover:text-champagne-300">Governance &amp; Controls</a>
+      <a href="#correspondence" onclick="toggleMobileMenu()" class="block text-slate-400 py-1.5 hover:text-champagne-300">Correspondence Desk</a>
+      <a href="#statutory-annexure" onclick="toggleMobileMenu()" class="block text-champagne-400 py-1.5">Registry Annexure &rarr;</a>
     </div>
   </header>
 
-  <main class="relative z-10 flex-grow max-w-7xl mx-auto px-6 lg:px-8 w-full space-y-36 py-20">
+  <main class="relative z-10 flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-24 sm:space-y-36 py-12 sm:py-20">
 
     <!-- ======================================================== -->
     <!-- SECTION 1: OVERVIEW                                      -->
     <!-- ======================================================== -->
-    <section id="overview" class="pt-6">
-      <div class="max-w-4xl pb-16">
-        <div class="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full bg-champagne-400/5 border border-champagne-400/20 text-champagne-300 text-[10px] font-mono uppercase tracking-[0.3em] mb-8">
+    <section id="overview" class="pt-4 sm:pt-6">
+      <div class="max-w-4xl pb-12 sm:pb-16">
+        <div class="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full bg-champagne-400/5 border border-champagne-400/20 text-champagne-300 text-[10px] font-mono uppercase tracking-[0.25em] sm:tracking-[0.3em] mb-6 sm:mb-8">
           <span class="w-1.5 h-1.5 rounded-full bg-emeraldAccent-400"></span>
-          <span>Institutional Standing & Corporate Advisory</span>
+          <span>Institutional Standing &amp; Corporate Advisory</span>
         </div>
 
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif text-white font-normal leading-[1.1] mb-8">
+        <h1 class="text-3xl sm:text-6xl lg:text-7xl font-serif text-white font-normal leading-[1.15] sm:leading-[1.1] mb-6 sm:mb-8">
           Strategic Advisory, <br />
-          <span class="gold-gradient-text italic font-normal">Quantitative Frameworks</span> & Capital Systems.
+          <span class="gold-gradient-text italic font-normal">Quantitative Frameworks</span> &amp; Capital Systems.
         </h1>
 
-        <p class="text-lg sm:text-xl text-slate-300 font-light leading-relaxed max-w-3xl mb-12">
+        <p class="text-base sm:text-xl text-slate-300 font-light leading-relaxed max-w-3xl mb-8 sm:mb-12">
           ARX PRIME serves as an institutional partner to corporate entities, financial institutions, and sovereign-linked organizations—delivering strategic corporate guidance, sophisticated econometric modeling, cross-border transactional architecture, and rigorous treasury risk governance.
         </p>
 
-        <div class="flex flex-wrap items-center gap-5 font-mono text-xs tracking-wider">
-          <a href="#mandates" class="px-6 py-3.5 bg-champagne-400 hover:bg-champagne-300 text-obsidian-950 font-semibold rounded-lg shadow-gold-glow transition duration-200">
+        <div class="flex flex-wrap items-center gap-3 sm:gap-5 font-mono text-xs tracking-wider">
+          <a href="#mandates" class="px-5 sm:px-6 py-3 sm:py-3.5 bg-champagne-400 hover:bg-champagne-300 text-obsidian-950 font-semibold rounded-lg shadow-gold-glow transition duration-200">
             Explore Advisory Mandates
           </a>
-          <a href="#treasury" class="px-6 py-3.5 bg-obsidian-850 hover:bg-obsidian-800 text-slate-200 border border-white/10 hover:border-champagne-400/40 rounded-lg transition duration-200">
+          <a href="#treasury" class="px-5 sm:px-6 py-3 sm:py-3.5 bg-obsidian-850 hover:bg-obsidian-800 text-slate-200 border border-white/10 hover:border-champagne-400/40 rounded-lg transition duration-200">
             Treasury Standards
           </a>
-          <a href="#statutory-annexure" class="px-6 py-3.5 bg-transparent hover:bg-white/5 text-champagne-300 border border-champagne-400/25 rounded-lg transition duration-200">
+          <a href="#statutory-annexure" class="px-5 sm:px-6 py-3 sm:py-3.5 bg-transparent hover:bg-white/5 text-champagne-300 border border-champagne-400/25 rounded-lg transition duration-200">
             Verification Coordinates
           </a>
         </div>
       </div>
 
-      <!-- Institutional Practice Statement Callout -->
-      <div class="p-8 sm:p-10 rounded-2xl glass-surface-gold border-l-4 border-champagne-400 mb-16 shadow-vault">
-        <div class="text-[10px] font-mono uppercase tracking-[0.25em] text-champagne-300 mb-4 flex items-center space-x-2">
+      <!-- Institutional Statement Callout -->
+      <div class="p-6 sm:p-10 rounded-2xl glass-surface-gold border-l-4 border-champagne-400 mb-12 sm:mb-16 shadow-vault">
+        <div class="text-[10px] font-mono uppercase tracking-[0.25em] text-champagne-300 mb-3 sm:mb-4 flex items-center space-x-2">
           <i data-lucide="shield" class="w-4 h-4 text-champagne-400"></i>
           <span>Institutional Practice Focus</span>
         </div>
-        <p class="text-xl sm:text-2xl font-serif italic text-white leading-relaxed font-normal">
+        <p class="text-lg sm:text-2xl font-serif italic text-white leading-relaxed font-normal">
           Providing high-conviction corporate advisory, advanced econometric analytics, and cross-border strategic structuring to global institutions, sovereign entities, and market enterprises requiring institutional capital infrastructure and disciplined balance sheet execution.
         </p>
       </div>
 
       <!-- Core Pillars Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6 border-t border-white/5">
-        <div class="glass-surface p-8 rounded-2xl space-y-4 hover:border-champagne-400/30 transition-all duration-300">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 pt-6 border-t border-white/5">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-4 hover:border-champagne-400/30 transition-all duration-300">
           <div class="w-12 h-12 rounded-xl bg-champagne-400/10 border border-champagne-400/20 flex items-center justify-center text-champagne-400">
             <i data-lucide="compass" class="w-6 h-6"></i>
           </div>
@@ -269,7 +268,7 @@
           <ul class="text-[11px] font-mono text-slate-400 space-y-2 pt-2 border-t border-white/5">
             <li class="flex items-center space-x-2">
               <i data-lucide="check" class="w-3.5 h-3.5 text-champagne-400"></i>
-              <span>Corporate Restructuring & Realignment</span>
+              <span>Corporate Restructuring &amp; Realignment</span>
             </li>
             <li class="flex items-center space-x-2">
               <i data-lucide="check" class="w-3.5 h-3.5 text-champagne-400"></i>
@@ -278,7 +277,7 @@
           </ul>
         </div>
 
-        <div class="glass-surface p-8 rounded-2xl space-y-4 hover:border-champagne-400/30 transition-all duration-300">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-4 hover:border-champagne-400/30 transition-all duration-300">
           <div class="w-12 h-12 rounded-xl bg-champagne-400/10 border border-champagne-400/20 flex items-center justify-center text-champagne-400">
             <i data-lucide="binary" class="w-6 h-6"></i>
           </div>
@@ -289,7 +288,7 @@
           <ul class="text-[11px] font-mono text-slate-400 space-y-2 pt-2 border-t border-white/5">
             <li class="flex items-center space-x-2">
               <i data-lucide="check" class="w-3.5 h-3.5 text-champagne-400"></i>
-              <span>Macro Volatility & Tail-Risk Evaluation</span>
+              <span>Macro Volatility &amp; Tail-Risk Evaluation</span>
             </li>
             <li class="flex items-center space-x-2">
               <i data-lucide="check" class="w-3.5 h-3.5 text-champagne-400"></i>
@@ -298,7 +297,7 @@
           </ul>
         </div>
 
-        <div class="glass-surface p-8 rounded-2xl space-y-4 hover:border-champagne-400/30 transition-all duration-300">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-4 hover:border-champagne-400/30 transition-all duration-300">
           <div class="w-12 h-12 rounded-xl bg-champagne-400/10 border border-champagne-400/20 flex items-center justify-center text-champagne-400">
             <i data-lucide="landmark" class="w-6 h-6"></i>
           </div>
@@ -321,38 +320,38 @@
     </section>
 
     <!-- ======================================================== -->
-    <!-- SECTION 2: ADVISORY MANDATES                             -->
+    <!-- SECTION 2: ADVISORY MANDATES                            -->
     <!-- ======================================================== -->
     <section id="mandates" class="pt-8 border-t border-white/5">
-      <div class="max-w-4xl mb-14">
+      <div class="max-w-4xl mb-12 sm:mb-14">
         <div class="text-xs font-mono text-champagne-400 uppercase tracking-widest mb-3 flex items-center space-x-2">
           <i data-lucide="briefcase" class="w-4 h-4 text-champagne-400"></i>
           <span>Core Institutional Practice</span>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-serif text-white mb-6">Chartered Advisory Mandates</h2>
+        <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4 sm:mb-6">Chartered Advisory Mandates</h2>
         <p class="text-slate-300 text-sm font-light leading-relaxed">
           ARX PRIME operates under a comprehensive institutional charter, providing strategic, management, financial, and analytical advisory services to corporations, financial bodies, and governmental organizations worldwide.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="glass-surface p-8 rounded-2xl space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-4">
           <div class="flex items-center justify-between border-b border-white/5 pb-4">
             <span class="text-xs font-mono text-champagne-300 uppercase tracking-widest">Mandate 01</span>
             <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-slate-400">Corporate Strategy</span>
           </div>
-          <h3 class="text-2xl font-serif text-white font-medium">Enterprise Restructuring & Capital Allocation</h3>
+          <h3 class="text-2xl font-serif text-white font-medium">Enterprise Restructuring &amp; Capital Allocation</h3>
           <p class="text-xs text-slate-300 font-light leading-relaxed">
             Guiding boards and executive leadership through capitalization realignment, debt-equity architecture, multi-tier corporate structuring, and cross-border commercial transactions designed to maximize institutional balance sheet efficiency.
           </p>
           <div class="pt-2 text-xs font-mono text-slate-400 space-y-1.5">
-            <div class="text-champagne-400">• Capital Structure Optimization & Debt Advisory</div>
-            <div class="text-champagne-400">• Joint Venture Architecture & Cross-Border Alliances</div>
-            <div class="text-champagne-400">• Asset Due Diligence & Corporate Reorganization</div>
+            <div class="text-champagne-400">&bull; Capital Structure Optimization &amp; Debt Advisory</div>
+            <div class="text-champagne-400">&bull; Joint Venture Architecture &amp; Cross-Border Alliances</div>
+            <div class="text-champagne-400">&bull; Asset Due Diligence &amp; Corporate Reorganization</div>
           </div>
         </div>
 
-        <div class="glass-surface p-8 rounded-2xl space-y-4">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-4">
           <div class="flex items-center justify-between border-b border-white/5 pb-4">
             <span class="text-xs font-mono text-champagne-300 uppercase tracking-widest">Mandate 02</span>
             <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-slate-400">Global Markets</span>
@@ -362,13 +361,13 @@
             Formulating technical collaboration agreements, international consortium arrangements, and regulatory clearance protocols across foreign operating corridors for enterprise groups seeking resilient multi-jurisdictional establishment.
           </p>
           <div class="pt-2 text-xs font-mono text-slate-400 space-y-1.5">
-            <div class="text-champagne-400">• International Collaboration Structuring</div>
-            <div class="text-champagne-400">• Cross-Border Technical Licensing Agreements</div>
-            <div class="text-champagne-400">• Multi-Jurisdiction Regulatory Liaison & Alignment</div>
+            <div class="text-champagne-400">&bull; International Collaboration Structuring</div>
+            <div class="text-champagne-400">&bull; Cross-Border Technical Licensing Agreements</div>
+            <div class="text-champagne-400">&bull; Multi-Jurisdiction Regulatory Liaison &amp; Alignment</div>
           </div>
         </div>
 
-        <div class="glass-surface p-8 rounded-2xl space-y-4">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-4">
           <div class="flex items-center justify-between border-b border-white/5 pb-4">
             <span class="text-xs font-mono text-champagne-300 uppercase tracking-widest">Mandate 03</span>
             <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-slate-400">Fiduciary Controls</span>
@@ -378,13 +377,13 @@
             Instituting comprehensive corporate risk policies, counterparty stress-testing parameters, and internal compliance controls to shield institutional balance sheets against liquidity shocks, systemic disruptions, and operational default risks.
           </p>
           <div class="pt-2 text-xs font-mono text-slate-400 space-y-1.5">
-            <div class="text-champagne-400">• Comprehensive Fiduciary Risk Controls</div>
-            <div class="text-champagne-400">• Counterparty Exposure & Solvency Assessment</div>
-            <div class="text-champagne-400">• Institutional Internal Audit Procedures</div>
+            <div class="text-champagne-400">&bull; Comprehensive Fiduciary Risk Controls</div>
+            <div class="text-champagne-400">&bull; Counterparty Exposure &amp; Solvency Assessment</div>
+            <div class="text-champagne-400">&bull; Institutional Internal Audit Procedures</div>
           </div>
         </div>
 
-        <div class="glass-surface p-8 rounded-2xl space-y-4">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-4">
           <div class="flex items-center justify-between border-b border-white/5 pb-4">
             <span class="text-xs font-mono text-champagne-300 uppercase tracking-widest">Mandate 04</span>
             <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-slate-400">Legal Architecture</span>
@@ -394,9 +393,9 @@
             Structuring commercial agreements with disciplined dispute resolution mechanics prioritizing private, confidential institutional conciliation and binding commercial arbitration to protect proprietary rights and balance sheet integrity.
           </p>
           <div class="pt-2 text-xs font-mono text-slate-400 space-y-1.5">
-            <div class="text-champagne-400">• Commercial Conciliation Protocols</div>
-            <div class="text-champagne-400">• Binding Institutional Arbitration Alignment</div>
-            <div class="text-champagne-400">• Fiduciary Asset Protection Frameworks</div>
+            <div class="text-champagne-400">&bull; Commercial Conciliation Protocols</div>
+            <div class="text-champagne-400">&bull; Binding Institutional Arbitration Alignment</div>
+            <div class="text-champagne-400">&bull; Fiduciary Asset Protection Frameworks</div>
           </div>
         </div>
       </div>
@@ -406,21 +405,21 @@
     <!-- SECTION 3: QUANTITATIVE ANALYTICS & RESEARCH             -->
     <!-- ======================================================== -->
     <section id="analytics" class="pt-8 border-t border-white/5">
-      <div class="max-w-4xl mb-14">
+      <div class="max-w-4xl mb-12 sm:mb-14">
         <div class="text-xs font-mono text-champagne-400 uppercase tracking-widest mb-3 flex items-center space-x-2">
           <i data-lucide="cpu" class="w-4 h-4 text-champagne-400"></i>
           <span>Econometric Modeling</span>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-serif text-white mb-6">Quantitative Analytics & Empirical Research</h2>
+        <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4 sm:mb-6">Quantitative Analytics &amp; Empirical Research</h2>
         <p class="text-slate-300 text-sm font-light leading-relaxed">
           The firm formulates advanced empirical methodologies, structural market analyses, and econometric models to inform enterprise capitalization strategies and protect unencumbered corporate liquidity.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
         
-        <div class="lg:col-span-7 glass-surface p-8 sm:p-10 rounded-2xl space-y-6">
-          <h3 class="text-2xl font-serif text-white font-medium">Econometric Frameworks & Modeling Scope</h3>
+        <div class="lg:col-span-7 glass-surface p-6 sm:p-10 rounded-2xl space-y-6">
+          <h3 class="text-2xl font-serif text-white font-medium">Econometric Frameworks &amp; Modeling Scope</h3>
           <p class="text-xs text-slate-300 font-light leading-relaxed">
             Operating at the intersection of economic theory and empirical mathematics, ARX PRIME develops proprietary stress-testing environments that evaluate how macro shocks, interest rate shifts, and liquidity contractions impact institutional debt facilities and cash reserves.
           </p>
@@ -444,7 +443,7 @@
         </div>
 
         <div class="lg:col-span-5 space-y-6">
-          <div class="glass-surface-gold p-8 rounded-2xl space-y-4">
+          <div class="glass-surface-gold p-6 sm:p-8 rounded-2xl space-y-4">
             <div class="flex items-center space-x-3 text-champagne-400">
               <i data-lucide="activity" class="w-5 h-5"></i>
               <h4 class="text-xl font-serif text-white">Methodological Rigor</h4>
@@ -480,22 +479,22 @@
     </section>
 
     <!-- ======================================================== -->
-    <!-- SECTION 4: TREASURY & SETTLEMENT INFRASTRUCTURE          -->
+    <!-- SECTION 4: TREASURY & SETTLEMENT INFRASTRUCTURE         -->
     <!-- ======================================================== -->
     <section id="treasury" class="pt-8 border-t border-white/5">
-      <div class="max-w-4xl mb-14">
+      <div class="max-w-4xl mb-12 sm:mb-14">
         <div class="text-xs font-mono text-champagne-400 uppercase tracking-widest mb-3 flex items-center space-x-2">
           <i data-lucide="layers" class="w-4 h-4 text-champagne-400"></i>
-          <span>Liquidity Protocols & Banking Rails</span>
+          <span>Liquidity Protocols &amp; Banking Rails</span>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-serif text-white mb-6">Treasury Architecture & Settlement Rails</h2>
+        <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4 sm:mb-6">Treasury Architecture &amp; Settlement Rails</h2>
         <p class="text-slate-300 text-sm font-light leading-relaxed">
           The corporate constitution grants full authority to engage with scheduled commercial banks, operate institutional accounts, execute negotiable instruments, and maintain banking credit facilities under dual-executive controls.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
-        <div class="glass-surface p-8 rounded-2xl space-y-3">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-3">
           <div class="w-10 h-10 rounded-lg bg-champagne-400/10 flex items-center justify-center text-champagne-400 mb-2">
             <i data-lucide="file-check" class="w-5 h-5"></i>
           </div>
@@ -505,17 +504,17 @@
           </p>
         </div>
 
-        <div class="glass-surface p-8 rounded-2xl space-y-3">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-3">
           <div class="w-10 h-10 rounded-lg bg-champagne-400/10 flex items-center justify-center text-champagne-400 mb-2">
             <i data-lucide="shield" class="w-5 h-5"></i>
           </div>
-          <h4 class="text-xl font-serif text-white font-medium">Borrowing & Security</h4>
+          <h4 class="text-xl font-serif text-white font-medium">Borrowing &amp; Security</h4>
           <p class="text-xs text-slate-300 font-light leading-relaxed">
             Full constitutional capacity to secure corporate borrowing, establish working capital facilities, issue debentures, and record proper institutional charges over company assets.
           </p>
         </div>
 
-        <div class="glass-surface p-8 rounded-2xl space-y-3">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-3">
           <div class="w-10 h-10 rounded-lg bg-champagne-400/10 flex items-center justify-center text-champagne-400 mb-2">
             <i data-lucide="lock" class="w-5 h-5"></i>
           </div>
@@ -527,8 +526,8 @@
       </div>
 
       <!-- Clearing Rails Detail Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        <div class="glass-surface p-8 rounded-2xl space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-4">
           <div class="flex items-center space-x-3 text-champagne-400">
             <i data-lucide="arrow-left-right" class="w-5 h-5"></i>
             <h4 class="text-2xl font-serif text-white">Domestic High-Value Clearing</h4>
@@ -552,7 +551,7 @@
           </ul>
         </div>
 
-        <div class="glass-surface p-8 rounded-2xl space-y-4">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-4">
           <div class="flex items-center space-x-3 text-champagne-400">
             <i data-lucide="globe" class="w-5 h-5"></i>
             <h4 class="text-2xl font-serif text-white">Cross-Border Settlement Compliance</h4>
@@ -578,7 +577,7 @@
       </div>
 
       <!-- Bank Underwriting Alignment Banner -->
-      <div class="glass-surface-gold p-8 sm:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-vault">
+      <div class="glass-surface-gold p-6 sm:p-10 rounded-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-vault">
         <div>
           <h4 class="text-2xl font-serif text-white mb-2">Commercial Bank Underwriting Alignment</h4>
           <p class="text-xs text-slate-300 font-light max-w-xl leading-relaxed">
@@ -592,32 +591,32 @@
     </section>
 
     <!-- ======================================================== -->
-    <!-- SECTION 5: GOVERNANCE & COMPLIANCE CONTROLS              -->
+    <!-- SECTION 5: GOVERNANCE & COMPLIANCE CONTROLS             -->
     <!-- ======================================================== -->
     <section id="governance" class="pt-8 border-t border-white/5">
-      <div class="max-w-4xl mb-14">
+      <div class="max-w-4xl mb-12 sm:mb-14">
         <div class="text-xs font-mono text-champagne-400 uppercase tracking-widest mb-3 flex items-center space-x-2">
           <i data-lucide="shield-alert" class="w-4 h-4 text-champagne-400"></i>
-          <span>Statutory Standing & Fiduciary Rigor</span>
+          <span>Statutory Standing &amp; Fiduciary Rigor</span>
         </div>
-        <h2 class="text-3xl sm:text-5xl font-serif text-white mb-6">Governance & Compliance Controls</h2>
+        <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4 sm:mb-6">Governance &amp; Compliance Controls</h2>
         <p class="text-slate-300 text-sm font-light leading-relaxed">
           ARX PRIME enforces rigorous compliance standards aligned with institutional banking diligence and international Anti-Money Laundering (AML) standards.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
-        <div class="glass-surface p-8 rounded-2xl space-y-3">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-3">
           <div class="w-10 h-10 rounded-lg bg-champagne-400/10 flex items-center justify-center text-champagne-400 mb-2">
             <i data-lucide="shield-check" class="w-5 h-5"></i>
           </div>
-          <h4 class="text-xl font-serif text-white font-medium">AML & CFT Rigor</h4>
+          <h4 class="text-xl font-serif text-white font-medium">AML &amp; CFT Rigor</h4>
           <p class="text-xs text-slate-300 font-light leading-relaxed">
             Comprehensive compliance with Prevention of Money Laundering Act guidelines, mandatory counterparty origin checks, and strict sanctions verification across all engagements.
           </p>
         </div>
 
-        <div class="glass-surface p-8 rounded-2xl space-y-3">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-3">
           <div class="w-10 h-10 rounded-lg bg-champagne-400/10 flex items-center justify-center text-champagne-400 mb-2">
             <i data-lucide="check-circle" class="w-5 h-5"></i>
           </div>
@@ -627,7 +626,7 @@
           </p>
         </div>
 
-        <div class="glass-surface p-8 rounded-2xl space-y-3">
+        <div class="glass-surface p-6 sm:p-8 rounded-2xl space-y-3">
           <div class="w-10 h-10 rounded-lg bg-champagne-400/10 flex items-center justify-center text-champagne-400 mb-2">
             <i data-lucide="award" class="w-5 h-5"></i>
           </div>
@@ -661,10 +660,10 @@
     </section>
 
     <!-- ======================================================== -->
-    <!-- SECTION 6: CORRESPONDENCE DESK                           -->
+    <!-- SECTION 6: CORRESPONDENCE DESK                          -->
     <!-- ======================================================== -->
     <section id="correspondence" class="pt-8 border-t border-white/5">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
         
         <div class="lg:col-span-5 space-y-6">
           <div class="text-xs font-mono text-champagne-400 uppercase tracking-widest flex items-center space-x-2">
@@ -691,7 +690,7 @@
                 <span class="text-slate-500 uppercase block text-[10px] tracking-wider">Registered Legal Seat</span>
                 <p class="text-slate-300 text-xs font-sans leading-relaxed mt-1">
                   105, Tulasi Vatika, Tulasipur, Cuttack Sadar,<br />
-                  Cuttack – 753008, Odisha, India
+                  Cuttack &ndash; 753008, Odisha, India
                 </p>
               </div>
             </div>
@@ -699,7 +698,7 @@
         </div>
 
         <div class="lg:col-span-7">
-          <div class="glass-surface-gold p-8 sm:p-10 rounded-2xl shadow-vault">
+          <div class="glass-surface-gold p-6 sm:p-10 rounded-2xl shadow-vault">
             <h3 class="text-2xl font-serif text-white mb-2 font-medium">Transmit Institutional Inquiry</h3>
             <p class="text-xs text-slate-400 font-light mb-6">Official communications are routed directly to executive management.</p>
 
@@ -710,7 +709,7 @@
                   <input type="text" id="inqInst" required placeholder="e.g. Scheduled Commercial Bank" class="w-full bg-obsidian-950 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-champagne-400" />
                 </div>
                 <div>
-                  <label class="text-slate-300 font-mono block mb-1">Officer Name & Designation</label>
+                  <label class="text-slate-300 font-mono block mb-1">Officer Name &amp; Designation</label>
                   <input type="text" id="inqOfficer" required placeholder="e.g. Credit Underwriter / RM" class="w-full bg-obsidian-950 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-champagne-400" />
                 </div>
               </div>
@@ -721,7 +720,7 @@
               </div>
 
               <div>
-                <label class="text-slate-300 font-mono block mb-1">Scope of Inquiry & Documentation Requirements</label>
+                <label class="text-slate-300 font-mono block mb-1">Scope of Inquiry &amp; Documentation Requirements</label>
                 <textarea rows="4" id="inqMessage" required placeholder="Specify underwriting documentation required, account onboarding details, or regulatory verification scope..." class="w-full bg-obsidian-950 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-champagne-400"></textarea>
               </div>
 
@@ -738,23 +737,22 @@
   </main>
 
   <!-- ======================================================== -->
-  <!-- STATUTORY REGISTRY ANNEXURE (CLEAN & CONSOLIDATED)       -->
+  <!-- STATUTORY REGISTRY ANNEXURE                              -->
   <!-- ======================================================== -->
-  <section id="statutory-annexure" class="relative z-10 border-t border-white/10 bg-obsidian-950 pt-16 pb-14">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+  <section id="statutory-annexure" class="relative z-10 border-t border-white/10 bg-obsidian-950 pt-12 sm:pt-16 pb-12 sm:pb-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-8 border-b border-white/5 gap-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-6 sm:pb-8 border-b border-white/5 gap-4">
         <div>
-          <span class="text-[10px] font-mono text-champagne-400 uppercase tracking-[0.3em] block mb-2">Statutory Registry Annexure</span>
+          <span class="text-[10px] font-mono text-champagne-400 uppercase tracking-[0.25em] sm:tracking-[0.3em] block mb-2">Statutory Registry Annexure</span>
           <h3 class="text-2xl sm:text-3xl font-serif text-white tracking-wider font-medium">Corporate Verification Coordinates</h3>
         </div>
         <p class="text-xs font-mono text-slate-400">
-          Official Entity Record • Ministry of Corporate Affairs Good Standing
+          Official Entity Record &bull; Ministry of Corporate Affairs Good Standing
         </p>
       </div>
 
-      <!-- Coordinates Grid: Strictly CIN and Official Desk -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono text-xs mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono text-xs mb-6 sm:mb-8">
         <div class="p-6 rounded-xl bg-obsidian-900 border border-white/5 space-y-1.5 flex flex-col justify-between">
           <div>
             <span class="text-slate-500 uppercase block text-[10px] tracking-widest mb-1">Corporate Identity (CIN)</span>
@@ -771,17 +769,16 @@
             <span class="text-slate-500 uppercase block text-[10px] tracking-widest mb-1">Official Desk</span>
             <a href="mailto:arxprime@outlook.com" class="text-champagne-300 hover:text-white transition-colors text-base font-semibold block">arxprime@outlook.com</a>
           </div>
-          <span class="text-[10px] text-slate-400 pt-2 block">Direct Compliance & Executive Correspondence</span>
+          <span class="text-[10px] text-slate-400 pt-2 block">Direct Compliance &amp; Executive Correspondence</span>
         </div>
       </div>
 
-      <!-- Legal Seat Callout with One-Click Copy -->
-      <div class="p-6 rounded-xl glass-surface flex flex-col md:flex-row md:items-center justify-between gap-6 font-mono text-xs">
+      <div class="p-5 sm:p-6 rounded-xl glass-surface flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6 font-mono text-xs">
         <div>
           <span class="text-slate-500 uppercase text-[10px] tracking-widest block mb-1">Registered Legal Seat Address</span>
           <span class="text-slate-300 font-sans text-sm block">105, Tulasi Vatika, Tulasipur, Cuttack Sadar, Cuttack - 753008, Odisha, India</span>
         </div>
-        <button onclick="copyToClipboard('U702000D2026PTC054503', 'CIN Copied to Clipboard')" class="px-5 py-2.5 border border-champagne-400/30 text-champagne-300 hover:bg-champagne-400/10 rounded-lg transition duration-200 text-xs font-mono uppercase tracking-wider whitespace-nowrap flex items-center space-x-2">
+        <button onclick="copyToClipboard('U702000D2026PTC054503', 'CIN Copied to Clipboard')" class="px-5 py-2.5 border border-champagne-400/30 text-champagne-300 hover:bg-champagne-400/10 rounded-lg transition duration-200 text-xs font-mono uppercase tracking-wider whitespace-nowrap flex items-center justify-center space-x-2">
           <i data-lucide="copy" class="w-3.5 h-3.5 text-champagne-400"></i>
           <span>Copy CIN for Verification</span>
         </button>
@@ -790,13 +787,13 @@
     </div>
   </section>
 
-  <!-- Minimalist Sovereign Footer (Zero Dead Links) -->
-  <footer class="relative z-10 border-t border-white/5 bg-obsidian-950 py-12 text-slate-400 font-mono text-xs">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+  <!-- Minimalist Sovereign Footer -->
+  <footer class="relative z-10 border-t border-white/5 bg-obsidian-950 py-8 sm:py-12 text-slate-400 font-mono text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
       <div class="flex items-center space-x-3">
         <span class="font-serif tracking-widest text-white text-base font-medium">ARX PRIME</span>
-        <span class="text-white/20">•</span>
-        <span class="text-slate-500">Institutional Advisory & Capital Infrastructure</span>
+        <span class="text-white/20">&bull;</span>
+        <span class="text-slate-500 text-[11px] sm:text-xs">Institutional Advisory &amp; Capital Infrastructure</span>
       </div>
       <div class="text-[11px] text-slate-500 uppercase tracking-widest">
         All rights reserved.
@@ -837,7 +834,7 @@
       }, 3500);
     }
 
-    // Copy Utility with iframe execCommand fallback
+    // Copy Utility with clipboard fallback
     function copyToClipboard(text, successMsg) {
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text).then(() => {
