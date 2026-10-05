@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>ARX PRIME | Institutional Advisory & Capital Infrastructure</title>
 
-  <!-- Typography: Cormorant Garamond, Plus Jakarta Sans, JetBrains Mono -->
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -151,13 +151,13 @@
   <!-- Ambient Dynamic Graphic Visualizer -->
   <canvas id="ambientCanvas"></canvas>
 
-  <!-- Optimized Responsive Institutional Header -->
+  <!-- Clean Non-Colliding Institutional Header -->
   <header class="sticky top-0 z-50 bg-obsidian-950/95 backdrop-blur-2xl border-b border-white/5 transition-all pt-[env(safe-area-inset-top,0px)]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 sm:py-4 flex items-center justify-between gap-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
       
-      <!-- Brand Emblem & Title Group -->
-      <a href="#overview" class="flex items-center space-x-3 sm:space-x-4 group min-w-0 flex-shrink" aria-label="ARX PRIME Home">
-        <div class="w-9 h-9 sm:w-11 sm:h-11 relative flex items-center justify-center shrink-0">
+      <!-- Brand Emblem & Title ONLY (Zero Tagline, Zero Collision) -->
+      <a href="#overview" class="flex items-center space-x-3.5 group flex-shrink-0" aria-label="ARX PRIME Home">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 relative flex items-center justify-center shrink-0">
           <svg class="w-full h-full transform group-hover:rotate-45 transition-transform duration-700 ease-out" viewBox="0 0 100 100" fill="none">
             <polygon points="50,4 96,50 50,96 4,50" stroke="#C5A059" stroke-width="1.8" stroke-opacity="0.9" fill="rgba(197, 160, 89, 0.08)"/>
             <polygon points="50,14 86,50 50,86 14,50" stroke="#C5A059" stroke-width="1.2" stroke-dasharray="3 3" stroke-opacity="0.5"/>
@@ -166,14 +166,13 @@
             <circle cx="50" cy="50" r="3.5" fill="#C5A059" />
           </svg>
         </div>
-        <div class="flex flex-col min-w-0 justify-center">
-          <span class="text-xl sm:text-2xl font-serif tracking-[0.22em] text-white font-medium whitespace-nowrap leading-tight">ARX PRIME</span>
-          <span class="hidden sm:block text-[8px] sm:text-[9px] font-mono tracking-[0.28em] text-slate-400 uppercase mt-0.5 truncate">Institutional Advisory &amp; Capital Infrastructure</span>
-        </div>
+        <span class="text-xl sm:text-2xl font-serif tracking-[0.25em] text-white font-medium whitespace-nowrap select-none">
+          ARX PRIME
+        </span>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden xl:flex items-center space-x-8 text-xs font-mono tracking-widest uppercase flex-shrink-0">
+      <!-- Desktop Navigation Links (Visible on 2XL / Large Displays) -->
+      <nav class="hidden 2xl:flex items-center space-x-7 text-xs font-mono tracking-widest uppercase flex-shrink-0">
         <a href="#overview" class="text-slate-300 hover:text-champagne-300 transition-colors py-1">Overview</a>
         <a href="#mandates" class="text-slate-400 hover:text-champagne-300 transition-colors py-1">Advisory Mandates</a>
         <a href="#analytics" class="text-slate-400 hover:text-champagne-300 transition-colors py-1">Quantitative Analytics</a>
@@ -183,23 +182,23 @@
       </nav>
 
       <!-- Institutional Quick Actions -->
-      <div class="flex items-center space-x-2.5 sm:space-x-4 flex-shrink-0">
-        <a href="#statutory-annexure" class="hidden md:inline-flex items-center space-x-2 text-xs font-mono tracking-wider text-champagne-300 border border-champagne-400/30 bg-champagne-400/5 hover:bg-champagne-400/10 px-3.5 py-2 rounded-lg transition duration-200">
+      <div class="flex items-center space-x-3 sm:space-x-4 flex-shrink-0">
+        <a href="#statutory-annexure" class="hidden sm:inline-flex items-center space-x-2 text-xs font-mono tracking-wider text-champagne-300 border border-champagne-400/30 bg-champagne-400/5 hover:bg-champagne-400/10 px-3.5 py-2.5 rounded-lg transition duration-200">
           <i data-lucide="shield-check" class="w-3.5 h-3.5 text-champagne-400"></i>
-          <span>Registry</span>
+          <span>Registry Coordinates</span>
         </a>
-        <a href="#correspondence" class="px-3 sm:px-4 py-2 sm:py-2.5 bg-gradient-to-r from-champagne-400 to-champagne-500 hover:from-champagne-300 hover:to-champagne-400 text-obsidian-950 font-semibold text-[11px] sm:text-xs font-mono uppercase tracking-wider rounded-lg shadow-gold-glow transition duration-200 whitespace-nowrap">
+        <a href="#correspondence" class="px-4 py-2.5 bg-gradient-to-r from-champagne-400 to-champagne-500 hover:from-champagne-300 hover:to-champagne-400 text-obsidian-950 font-semibold text-xs font-mono uppercase tracking-wider rounded-lg shadow-gold-glow transition duration-200 whitespace-nowrap">
           Transmission Desk
         </a>
-        <button onclick="toggleMobileMenu()" class="xl:hidden p-2 -mr-1 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Navigation Menu">
-          <i data-lucide="menu" id="menuToggleIcon" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+        <button onclick="toggleMobileMenu()" class="2xl:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Navigation Menu">
+          <i data-lucide="menu" id="menuToggleIcon" class="w-6 h-6"></i>
         </button>
       </div>
 
     </div>
 
-    <!-- Responsive Mobile Drawer -->
-    <div id="mobileMenu" class="hidden xl:hidden bg-obsidian-900/98 backdrop-blur-xl border-b border-white/10 px-6 py-6 space-y-4 font-mono text-xs uppercase tracking-widest">
+    <!-- Responsive Navigation Drawer -->
+    <div id="mobileMenu" class="hidden 2xl:hidden bg-obsidian-900/98 backdrop-blur-xl border-b border-white/10 px-6 py-6 space-y-4 font-mono text-xs uppercase tracking-widest">
       <a href="#overview" onclick="toggleMobileMenu()" class="block text-slate-200 py-1.5 hover:text-champagne-300">Overview</a>
       <a href="#mandates" onclick="toggleMobileMenu()" class="block text-slate-400 py-1.5 hover:text-champagne-300">Advisory Mandates</a>
       <a href="#analytics" onclick="toggleMobileMenu()" class="block text-slate-400 py-1.5 hover:text-champagne-300">Quantitative Analytics</a>
